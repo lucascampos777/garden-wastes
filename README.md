@@ -1,39 +1,58 @@
-# 🚀 React and Tailwind Starter Kit
+# 🗂️ Redesign UI with React
 
-Quickly set up a new `React.js` project with Tailwind CSS using the [starter kit](https://github.com/labnol/react-tailwind). The project was bootstrapped with Vite (replacing Create React App) and it uses the `singlefile` plugin to inline all the JavaScript and CSS files into a single minified file.
+## 🎯 **Goals**
+- Redesign the look and feel with `TailwindCSS` while keeping the core functionality of the original version.
+- Focus on clean, maintainable code, responsiveness and UI/UX improvements.
+- Incorporate the page with responsiveness and animations.
+- Fetching skips data from the API.
+---
 
-The latest version of the starter kit is built with React 19 and Tailwind CSS 4.
+## 🎨 **Design Updates**
 
-## Live Demo
+### ✅ **General**
+- Applied dark background shades using custom utility classes (`bg-mydark-*`).
+- Chosen primary accent color: **Vibrant Purple (#8b5cf6)**.
+- Used larger rounded corners (`rounded-xl`, `rounded-2xl`) for a modern look.
+- Applied smooth transitions and scaling effects (`hover:scale-105`, `transition-all`, `duration-300`).
 
-The [Digital Inspiration](https://digitalinspiration.com/) website is built with the Tailwind CSS, React.js and Vite. You can test the starter kit by opening the project in [StackBlitz](https://stackblitz.com/github/labnol/react-tailwind) or [CodeSandbox](https://codesandbox.io/p/sandbox/github/labnol/react-tailwind).
+---
 
-[![Screenshot](screenshot.png)](https://stackblitz.com/github/labnol/react-tailwind)
+### ✅ **Component Changes**
 
-[![Open in StackBlitz](https://img.shields.io/badge/Open_In_StackBlitz-blue.svg?logo=stackblitz&style=flat-square)](https://stackblitz.com/github/labnol/react-tailwind) [![Open in CodeSandbox](https://img.shields.io/badge/Open_In_CodeSandbox-000000?logo=codesandbox&style=flat-square)](https://codesandbox.io/p/sandbox/github/labnol/react-tailwind)
+#### 📌 **Header.jsx**
+- Converted into a sticky top bar with a backdrop blur effect.
+- Replaced text separators with a horizontal progress line.
+- Icons placed inside circular indicators with dynamic colors.
+- Fully scrollable on small screens.
 
-### Available `npm` commands
+#### 📌 **SkipCard.jsx**
+- Elevated card design with `shadow-lg` and smooth hover scaling.
+- Glassmorphism-inspired price badges.
+- Buttons redesigned with modern colors and full-width on mobile.
+- Transitioned to a cleaner layout using `rounded-2xl` and improved typography.
 
-In the project directory, you can run:
+#### 📌 **BottomNavbar.jsx**
+- Redesigned as a floating, glass-like bottom navbar with backdrop blur and shadow.
+- Buttons now feature modern rounded styles and hover animations.
+- Improved mobile layout by stacking buttons vertically on small screens.
 
-#### `npm run start`
+#### 📌 **SelectSkipPage.jsx**
+- Centered content with improved spacing and readability.
+- Introduced an animated spinner for loading state.
+- Adjusted padding to prevent content from being hidden behind the navbar.
+- Increased heading sizes for modern visual hierarchy.
 
-Runs the app in the development mode.
+---
 
-Open `http://localhost:5173` to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
+### ✅ **Tailwind CSS Utilities Added**
+- Used `backdrop-blur`, `shadow-lg`, and `transition-all` for modern visual effects.
+- Custom dark theme colors:
+  ```css
+  .bg-mydark-0 { background-color: #151515; }
+  .bg-mydark-1 { background-color: #1c1c1c; }
+  .bg-mydark-2 { background-color: #2a2a2a; }
+  .bg-mydark-3 { background-color: #3a3a3a; }
+  ```
+- Accent Color: **Purple (#8b5cf6)** applied across key interactive elements.
 
-#### `npm run build`
-
-Builds the React app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
-
-#### `npm run inline`
-
-This command will inline all the JavaScript and CSS files from the production build into a single minified file.
-
-## Connect with me
-
-The React and Tailwind CSS starter is written by [Amit Agarwal](https://www.labnol.org/about).
-
-[![X](https://img.shields.io/badge/Twitter-black.svg?logo=X&logoColor=white&style=flat)](https://x.com/labnol) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white&style=flat)](https://www.youtube.com/labnol) [![Google](https://img.shields.io/badge/Google-black.svg?logo=Google&logoColor=white&style=flat)](https://g.dev/amit) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white&style=flat)](https://instagram.com/labnol) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white&style=flat)](https://linkedin.com/in/labnol) [![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white&style=flat)](https://stackoverflow.com/users/512127/amit-agarwal)
-
-If you have any questions or feedback, send an email at [amit@labnol.org](mailto:amit@labnol.org?subject=Tailwind+React).
+---
